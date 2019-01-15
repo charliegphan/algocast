@@ -15,13 +15,15 @@ function maxChar(str) {
     }
   }
   
+  let freq = 0;
   let max;
   for (let key in charFreq) {
-    if (charFreq[key] > max) {
-      max = charFreq[key];
+    if (charFreq[key] > freq) {
+      freq = charFreq[key];
+      max = key;
     }
   }
-  
+
   return max;
 }
 
